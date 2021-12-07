@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de código | Alura DEV</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/informacoes-projeto.css">
+    <link rel="stylesheet" href="assets/css/principal.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="../assets/img/logo.svg" class="cabecalho__logo" alt="Logo da Alura DEV">
+        <button class="cabecalho__botao cabecalho__botao--search" aria-label="Busca" id="btn-pesquisa"><i></i></button>
+        <button aria-label="Menu" class="cabecalho__botao cabecalho__botao--menu" id="btn-menu"><i></i></button>
+        <p class="cabecalho__perfil perfil">Harry</p>
+        <input type="search" class="cabecalho__search input" placeholder="Busque por algo">
+    </header>
+    <nav class="menu">
+        <h2 class="sidebar-title menu__titulo">Menu</h2>
+        <ul class="menu__lista">
+            <li class="menu__lista__item menu__lista__item--ativo menu__lista__item--codigo">
+                <a href="#">Editor de
+                    código</a>
+                </li>
+            <li class="menu__lista__item menu__lista__item--comunidade">
+                <a href="../comunidade/index.html">Comunidade</a>
+            </li>
+            <li class="menu__lista__item--perfil">
+                <a href="#" class="perfil menu__perfil">Harry</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="principal">
+        <div class="editor">
+        <textarea spellcheck="false" rows="15">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+        const res = f(seed)
+        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+}
+</textarea>
+        </div>
+        <button class="principal__botao input">Visualizar com o highlight</button>
+    </main>
+    <form class="informacoes-projeto">
+        <fieldset class="form-group">
+            <legend class="sidebar-title form-item">Seu projeto</legend>
+            <input type="text" class="input form-item" placeholder="Nome do seu projeto">
+            <input type="text" class="input form-item" placeholder="Descrição do seu projeto">
+        </fieldset>
+        <fieldset class="form-group form-group--personalizacao">
+            <legend class="sidebar-title form-item">Personalização</legend>
+            <select class="input form-item">
+                <option selected>JavaScript</option>
+                <option>HTML</option>
+                <option>CSS</option>
+            </select>
+            <input type="color" class="informacoes-projeto__cor form-item" value="#6bd1ff">
+        </fieldset>
+        <button class="input informacoes-projeto__submit">Salvar Projeto</button>
+    </form>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

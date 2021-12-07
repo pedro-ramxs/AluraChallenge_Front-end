@@ -1,0 +1,23 @@
+.principal{
+    grid-column-start: 2;
+    grid-column: span 2;
+
+    grid-row-start: 2;
+    grid-row: span 2;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.principal__botao{
+    box-sizing: border-box;
+    background: #5081FB14;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1024px) {
+    .editor{
+        box-sizing: border-box;
+        min-height: 366px;
+    }
+}
