@@ -36,10 +36,6 @@ select option{
     background: none;
 }
 
-.informacoes-projeto__submit{
-    background: #5081FB;
-}
-
 @media screen and (max-width: 1024px){
     .form-group--personalizacao{
         flex-direction: row;

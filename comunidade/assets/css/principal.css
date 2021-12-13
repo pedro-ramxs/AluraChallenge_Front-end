@@ -34,7 +34,13 @@
 .projeto__informacao{
     display: flex;
     align-items: center;
+    padding: 0 10px;
+    border-radius: 8px;
 }
+
+.projeto__informacao:hover{background: rgba(255, 255, 255, 0.08);}
+
+.projeto__informacao:active{background: rgba(255, 255, 255, 0.16)}
 
 
 .projeto__informacao--comentarios::before{
@@ -44,6 +50,11 @@
 
 .projeto__informacao--curtidas::before{
     content: url(../icons/curtidas.svg);
+    margin-right: 10px;
+}
+
+.projeto__informacao--curtidas--curtido{
+    content: url(../icons/curtido.svg);
     margin-right: 10px;
 }
 

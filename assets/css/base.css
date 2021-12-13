@@ -18,6 +18,7 @@ body {
 }
 
 .perfil{
+    padding: 10px;
     display: flex;
     justify-self: end;
     align-items: center;
@@ -27,6 +28,11 @@ body {
     content: url(../img/profile.png);
     margin-right: 8px;
     border-radius: 100%;
+}
+
+.perfil:hover{
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
 }
 
 .input{
@@ -45,6 +51,33 @@ body {
     color: #FFFFFF;
 }
 
+.btn{background: #5081FB;}
+
+.btn:hover{background: #7BA4FC;}
+
+.btn:focus{background: #96B9FD;}
+
+.btn:active{
+    background: #7BA4FC;
+    border: 4px solid rgba(80, 129, 251, 0.72);
+}
+
+.btn-outlined{background: rgba(80, 129, 251, 0.08); color: #FFFFFF;}
+
+.btn-outlined:hover{background: rgba(80, 129, 251, 0.16);}
+
+.btn-outlined:focus{background: rgba(80, 129, 251, 0.24);}
+
+.btn-outlined:active{
+    background: rgba(80, 129, 251, 0.16);
+    border: 4px solid rgba(80, 129, 251, 0.24);
+}
+
+.icon{border-radius: 8px; padding: 10px;}
+
+.icon:hover{background: rgba(80, 129, 251, 0.08);}
+
+.icon:active{background: rgba(80, 129, 251, 0.16);}
 
 .sidebar-title{
     font-style: normal;
@@ -58,7 +91,6 @@ body {
 .editor{
     background: #000000;
     color: #FFFFFF;
-    border: 32px solid #6BD1FF;
     border-radius: 8px;
     padding: 16px;
     height: 100%;
@@ -68,12 +100,13 @@ body {
     flex-direction: column;
 }
 
-.editor textarea{
+.editor code{
     margin-top: 24px;
     background-color: #000000;
     height: 100%;
     color: #FFFFFF;
     box-shadow: 0px 16px 24px 0px #0000003D;
+    white-space: pre-wrap;
 }
 
 .editor::before{

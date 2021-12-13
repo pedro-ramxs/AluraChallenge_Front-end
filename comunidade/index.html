@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="assets/css/principal.css">
     <title>Comunidade | Alura DEV</title>
@@ -20,12 +21,13 @@
         <h2 class="sidebar-title menu__titulo">Menu</h2>
         <ul class="menu__lista">
             <li class="menu__lista__item menu__lista__item--codigo">
-                <a href="../editor-de-codigo/index.html" class="menu__lista__link menu__lista__link--codigo">Editor de
+                <a href="../editor-de-codigo/index.html">Editor de
                     código</a>
                 </li>
             <li class="menu__lista__item menu__lista__item--comunidade menu__lista__item--ativo">
-                <a href="#" class="menu__lista__link menu__lista__link--comunidade">Comunidade</a>
+                <a href="#">Comunidade</a>
             </li>
+            <li class="menu__lista__item menu__lista__item--linha"><span class="menu__lista__item--linha" role="presentation"></span></li>
             <li class="menu__lista__item--perfil">
                 <a href="#" class="perfil menu__perfil">Harry</a>
             </li>
@@ -34,9 +36,8 @@
     <main class="principal">
         <article class="projeto">
             <div class="editor">
-                <textarea spellcheck="false" rows="15" disabled>
+                <code contenteditable="false" aria-label="Editor de código" spellcheck="false" class="hljs language-cs">
 const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 const unfold = (f, seed) => {
     const go = (f, seed, acc) => {
@@ -45,7 +46,7 @@ const unfold = (f, seed) => {
     }
     return go(f, seed, [])
 }
-                </textarea>
+                </code>
             </div>
             <div class="projeto__conteudo">
                 <h2 class="projeto__titulo">Título do Projeto</h2>
@@ -57,9 +58,8 @@ const unfold = (f, seed) => {
         </article>
         <article class="projeto">
             <div class="editor">
-                <textarea spellcheck="false" rows="15" disabled>
+                <code contenteditable="false" aria-label="Editor de código" spellcheck="false" class="hljs language-cs">
 const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 const unfold = (f, seed) => {
     const go = (f, seed, acc) => {
@@ -68,7 +68,7 @@ const unfold = (f, seed) => {
     }
     return go(f, seed, [])
 }
-                </textarea>
+                </code>
             </div>
             <div class="projeto__conteudo">
                 <h2 class="projeto__titulo">Título do Projeto</h2>
@@ -80,9 +80,8 @@ const unfold = (f, seed) => {
         </article>
         <article class="projeto">
             <div class="editor">
-                <textarea spellcheck="false" rows="15" disabled>
+                <code contenteditable="false" aria-label="Editor de código" spellcheck="false" class="hljs language-cs">
 const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 const unfold = (f, seed) => {
     const go = (f, seed, acc) => {
@@ -91,7 +90,7 @@ const unfold = (f, seed) => {
     }
     return go(f, seed, [])
 }
-                </textarea>
+                </code>
             </div>
             <div class="projeto__conteudo">
                 <h2 class="projeto__titulo">Título do Projeto</h2>
@@ -103,9 +102,8 @@ const unfold = (f, seed) => {
         </article>
         <article class="projeto">
             <div class="editor">
-                <textarea spellcheck="false" rows="15" disabled>
+                <code contenteditable="false" aria-label="Editor de código" spellcheck="false" class="hljs language-cs">
 const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 const unfold = (f, seed) => {
     const go = (f, seed, acc) => {
@@ -114,7 +112,51 @@ const unfold = (f, seed) => {
     }
     return go(f, seed, [])
 }
-                </textarea>
+                </code>
+            </div>
+            <div class="projeto__conteudo">
+                <h2 class="projeto__titulo">Título do Projeto</h2>
+                <p class="projeto__descricao">Essa é a descrição do meu projeto</p>
+                <p class="projeto__informacao projeto__informacao--comentarios">9</p>
+                <p class="projeto__informacao projeto__informacao--curtidas">9</p>
+                <p class="projeto__informacao projeto__informacao--perfil perfil">@Harry</p>
+            </div>
+        </article>
+        <article class="projeto">
+            <div class="editor">
+                <code contenteditable="false" aria-label="Editor de código" spellcheck="false" class="hljs language-cs">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+        const res = f(seed)
+        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+}
+                </code>
+            </div>
+            <div class="projeto__conteudo">
+                <h2 class="projeto__titulo">Título do Projeto</h2>
+                <p class="projeto__descricao">Essa é a descrição do meu projeto</p>
+                <p class="projeto__informacao projeto__informacao--comentarios">9</p>
+                <p class="projeto__informacao projeto__informacao--curtidas">9</p>
+                <p class="projeto__informacao projeto__informacao--perfil perfil">@Harry</p>
+            </div>
+        </article>
+        <article class="projeto">
+            <div class="editor">
+                <code contenteditable="false" aria-label="Editor de código" spellcheck="false" class="hljs language-cs">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+        const res = f(seed)
+        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+}
+                </code>
             </div>
             <div class="projeto__conteudo">
                 <h2 class="projeto__titulo">Título do Projeto</h2>
@@ -125,6 +167,7 @@ const unfold = (f, seed) => {
             </div>
         </article>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 </html>

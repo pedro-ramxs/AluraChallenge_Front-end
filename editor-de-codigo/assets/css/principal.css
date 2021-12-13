@@ -9,12 +9,6 @@
     flex-direction: column;
 }
 
-.principal__botao{
-    box-sizing: border-box;
-    background: #5081FB14;
-    color: #FFFFFF;
-}
-
 @media screen and (max-width: 1024px) {
     .editor{
         box-sizing: border-box;
